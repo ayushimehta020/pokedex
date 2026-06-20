@@ -5,7 +5,7 @@ export async function commandCatch(state: State, ...args: string[]) {
   const data = await state.pokeapi.fetchPokemon(pokemonName);
   const roll = Math.random() * data.base_experience;
 
-  console.log(`Throwing a Pokeball at ${pokemonName}`);
+  console.log(`Throwing a Pokeball at ${pokemonName}...`);
 
   if (roll < 50) {
     console.log(`${pokemonName} was caught!`);
