@@ -100,4 +100,18 @@ export type Location = {
 export type Pokemon = {
   base_experience: number;
   name: string;
+  height: number;
+  weight: number;
+  stats: {
+    base_stat: number;
+    stat: {
+      name: string;
+    };
+  }[];
+  types: {
+    slot: number;
+    type: {
+      name: string;
+    };
+  }[];
 };

@@ -9,8 +9,8 @@ export async function commandCatch(state: State, ...args: string[]) {
 
   if (roll < 50) {
     console.log(`${pokemonName} was caught!`);
+    state.pokedex[data.name] = data;
   } else {
     console.log(`${pokemonName} escaped!`);
-    state.pokedex[data.name] = data;
   }
 }
